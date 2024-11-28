@@ -1,0 +1,144 @@
+body {
+    font-family: 'Yusei Magic', cursive;
+    margin: 0;
+    padding: 0;
+    background-color: #ffd1dc;
+    color: #333;
+}
+
+header {
+    background: repeating-linear-gradient(
+        90deg, 
+        #e74c3c,
+        #e74c3c 20px, 
+        white 20px,
+        white 40px
+    );
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+main {
+     min-height: 100vh;
+     padding: 40px;
+     margin: 0;
+}
+
+.gallery {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+    .gallery {
+        max-width: 100%;
+        padding: 0 10px;
+    }
+}
+
+.image {
+    width: 100px;
+    height: auto;
+    margin: 0 10px;
+}
+
+@media (max-width: 768px) {
+    .image {
+        width: 80px;
+    }
+}
+
+.button {
+    display: inline-block; 
+    padding: 10px 20px; 
+    background-color: #e74c3c;  
+    color: white; 
+    text-align: center; 
+    text-decoration: none; 
+    border-radius: 5px; 
+    transition: background-color 0.3s; 
+    margin-top: 25px;
+    width: 80px;
+}
+
+.button:hover {
+    background-color: #c0392b;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: -20px;
+} 
+
+.image-container {
+    text-align: center;
+}
+
+#loader {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    width: 60px;
+    height: 60px;
+    margin: -30px 0 0 -30px; 
+    border: 8px solid #f3f3f3; 
+    border-radius: 50%;
+    border-top: 8px solid #e74c3c; 
+    animation: spin 2s linear infinite; 
+    z-index: 9999; 
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+body.loaded #loader {
+    display: none;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+}
+
+label {
+    margin: 10px 0 5px;
+}
+
+input, select, textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+button[type="submit"] {
+    width: auto; /* ボタンの幅を自動に */
+}
+
+
+footer {
+    background:  #e74c3c;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: relative;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 10;
+}
