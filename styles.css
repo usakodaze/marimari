@@ -99,8 +99,9 @@ main {
     100% { transform: rotate(360deg); }
 }
 
+/* bodyがloadedクラスを持っている時にローダーを非表示に */
 body.loaded #loader {
-    display: none;
+    display: none !important;  /* 重要な場合は!importantをつけて強制的に非表示に */
 }
 
 form {
