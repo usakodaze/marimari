@@ -15,19 +15,32 @@
         <p style="margin-top: -20px;">壁紙プレゼント！<br>
             ※二次配布、商業利用はご遠慮下さい
         </p>
-      <div class="gallery">
-        <div class="image-container">
-          <img src="image-min.png2.png" alt="ダウンロードする画像" class="image">
-          <a href="image-min.png2.png" download class="button">画像をダウンロード</a>
+        
+        <!-- 画像ギャラリー -->
+        <div class="gallery">
+            <div class="image-container">
+                <img src="image-min.png2.png" alt="ダウンロードする画像" class="image">
+                <a href="image-min.png2.png" download class="button">画像をダウンロード</a>
+            </div>
+            <div class="image-container">
+                <img src="image2-min.png2.png" alt="新しい画像1" class="image">
+                <a href="image2-min.png2.png" download class="button">画像をダウンロード</a>
+            </div>
         </div>
-        <div class="image-container">
-          <img src="image2-min.png2.png" alt="新しい画像1" class="image">
-          <a href="image2-min.png2.png" download class="button">画像をダウンロード</a>
-        </div>
-      </div>
-       <p>マリオンクレープや壁紙に関するアンケートを行っています。ご協力いただける方は下のボタンをクリックして下さい。Googleフォームが開きます。※回答していただいた内容はお店の発展に活用させていただきます。その他の目的での使用は致しません</p>
+
+        <!-- アンケートの案内 -->
+        <p>マリオンクレープや壁紙に関するアンケートを行っています。ご協力いただける方は下のボタンをクリックして下さい。Googleフォームが開きます。※回答していただいた内容はお店の発展に活用させていただきます。その他の目的での使用は致しません</p>
+        
+        <!-- アンケートボタン -->
         <div class="button-container">
-         <a href="https://forms.gle/oaTWbbAwTj6UuQoQ9" target="_blank" class="button">アンケートに答える</a> 
+            <a href="https://forms.gle/oaTWbbAwTj6UuQoQ9" target="_blank" id="survey-button" class="button">アンケートに答える</a>
+        </div>
+
+        <!-- アンケート後に表示されるダウンロードリンク -->
+        <div id="download-section" style="display: none;">
+            <h3>アンケートありがとうございます！</h3>
+            <p>壁紙をダウンロードするには、下のボタンをクリックしてください。</p>
+            <a href="image-min.png2.png" download class="button">壁紙をダウンロード</a>
         </div>
     </main>
     
@@ -35,7 +48,17 @@
         <p>&copy; 2024 マリオンクレープ</p>
     </footer>
 
-    <script src="script.js"></script>
-    
+    <script>
+        // アンケートボタンがクリックされた後にダウンロードボタンを表示する
+        document.getElementById("survey-button").addEventListener("click", function(event) {
+            // Googleフォームのリンクに移動する前に確認ダイアログを表示
+            let answer = confirm("アンケートに答えた後、壁紙をダウンロードできるようになります。答えた後に戻ってきてください！");
+            if (answer) {
+                // ユーザーが「OK」を押したら、アンケート終了後にダウンロードリンクが表示されるように
+                document.getElementById("download-section").style.display = "block";
+            }
+        });
+    </script>
+
 </body>
 </html>
