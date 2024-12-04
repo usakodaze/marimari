@@ -43,7 +43,7 @@ main {
 
 /* logo-min.png専用のクラス */
 .logo-image {
-    width: 600%;
+    width: 1000%;
     margin: 0 auto;
     display: block;  
 }
