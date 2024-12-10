@@ -49,6 +49,7 @@ main {
     display: block;  
     margin-left: -5%;
     margin-top: -20px; 
+    margin-right: auto;
 }
 
 .image {
