@@ -154,3 +154,8 @@ footer {
     width: 100%;
     z-index: 10;
 }
+
+html, body {
+    overflow-x: hidden; /* 横スクロールを隠す */
+}
+
