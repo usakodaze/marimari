@@ -47,9 +47,8 @@ main {
     height: auto;
     margin: 0 auto;
     display: block;  
-    margin-left: -5%;
+    margin-left: -5%　!important;
     margin-top: -50px !important; 
-    margin-right: auto;
 }
 
 .image {
