@@ -45,10 +45,11 @@ main {
 .logo-image {
     width: 120% !important;
     height: auto;
-    margin-left: -100%　!important;
-    margin-top: -50px !important; 
+    margin-left: -100% !important;  /* 全角スペースを半角に修正 */
+    margin-top: -50px !important;
     position: relative;
 }
+
 
 .image {
     width: 100px;
