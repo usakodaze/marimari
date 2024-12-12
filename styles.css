@@ -45,10 +45,9 @@ main {
 .logo-image {
     width: 120% !important;
     height: auto;
-    margin: 0 auto;
-    display: block;  
     margin-left: -100%　!important;
     margin-top: -50px !important; 
+    position: relative;
 }
 
 .image {
